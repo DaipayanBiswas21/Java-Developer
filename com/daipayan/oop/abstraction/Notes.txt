@@ -1,0 +1,7 @@
+Son is inheriting from Parent, so it can access the salary variable.
+
+this.salary = salary; assigns the constructor parameter to the instance variable.
+
+main method is used for testing the class.
+
+Would you like it as a single file with inner classes, o

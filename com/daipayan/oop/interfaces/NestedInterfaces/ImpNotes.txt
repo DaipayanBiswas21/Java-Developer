@@ -1,0 +1,46 @@
+Awesome question again! You're diving into **nested interfaces** — nice! Let's clear it up step by step:
+
+---
+
+### 🧩 Why `A.NestedInterface`?
+
+When you write:
+```java
+class B implements A.NestedInterface
+```
+
+You're saying:
+> "Class `B` implements the nested interface called `NestedInterface` which is **defined inside class `A`**."
+
+---
+
+### 🤔 But why is it accessed like `A.NestedInterface`? Is it static?
+
+Yes — **nested interfaces are implicitly `static`**, even if you don’t write `static`.
+
+### 🚨 Rule:
+> **All interfaces declared inside a class or interface are implicitly `public static`**, unless marked otherwise.
+
+That means:
+- You can access `NestedInterface` using `A.NestedInterface` **without an instance of A**.
+- It behaves like a **static nested class/interface**.
+
+---
+
+### 🔁 If it were a normal (non-static) inner class?
+Then you'd need to do:
+```java
+A outer = new A();
+A.NestedInterface inner = outer.new NestedInterface(); // if it were a class
+```
+But that's **not required for interfaces**, since they're already static.
+
+---
+
+### ✅ In short:
+- `A.NestedInterface` syntax is valid because `NestedInterface` is implicitly `static`.
+- You don’t need an object of `A` to implement or access it.
+
+---
+
+Let me know if you want to try converting this to a normal inner class to compare the behavior!

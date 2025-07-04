@@ -1,0 +1,45 @@
+Great question! You're playing with **interfaces** in Java, particularly how static and default methods behave. Let's break it down simply:
+
+---
+
+### 🔍 Your Code Overview
+You're implementing interfaces `A` and `B`, and inside `main()`, you're calling:
+```java
+A.greeting();
+```
+
+Now you're asking:  
+**Why does `Main.greeting();` or `obj.greeting();` not work?**
+
+---
+
+### ✅ `A.greeting()` works:
+Because `greeting()` is **`static`** in the interface `A`. Static methods in interfaces:
+- **Belong to the interface**, not the implementing class.
+- Must be called using the **interface name**: `A.greeting();`
+
+---
+
+### ❌ `Main.greeting()` or `obj.greeting()` doesn't work:
+Because:
+1. **Static methods are not inherited** from interfaces.
+2. `Main` doesn't **override** or **own** the `greeting()` method.
+3. `greeting()` is not an instance method, so you **cannot call it on an object (`obj.greeting()`)** either.
+
+---
+
+### 🧠 Important Rules Recap:
+| Type       | How to Call             | Can Override? |
+|------------|-------------------------|---------------|
+| `static`   | `InterfaceName.method()`| ❌ No         |
+| `default`  | `object.method()`       | ✅ Yes        |
+| `abstract` | Must override in class  | ✅ Yes        |
+
+---
+
+### 💡 Bonus Tip:
+If **both `A` and `B`** have a `default void fun()` method, and you implement both, you must override it in `Main`, because Java won't know which one to pick – **diamond problem**.
+
+---
+
+Let me know if you want to see full working code with all these cases.
