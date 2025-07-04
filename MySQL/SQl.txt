@@ -1,0 +1,9 @@
+During my project work, I actively applied SQL skills to design and manage structured data using the collegedet database. I created and manipulated multiple relational tables such as student, teacher, and customerinfo, ensuring data accuracy using primary keys and foreign key constraints. This experience gave me a solid understanding of how normalized schemas maintain data integrity in real-world systems.
+
+I executed complex ALTER TABLE operations to modify column names, data types, and default values. This not only refined the table structure but also prepared me for dynamic database changes in a production environment. Using INSERT, UPDATE, and DELETE, I worked with realistic datasets to simulate CRUD operations essential in any enterprise application.
+
+My query-building experience includes diverse SELECT statements with WHERE, IN, BETWEEN, LIMIT, and ORDER BY clauses. I applied aggregate functions (MAX, AVG, COUNT) along with GROUP BY and HAVING to derive meaningful insights like average marks by city and student performance filters. These skills mirror the analytics-driven needs of modern data systems.
+
+Advanced SQL techniques like JOINs (INNER, LEFT, RIGHT, FULL OUTER) were used to associate students with courses and employees with their managers, reflecting real business relationships. I also practiced creating views and subqueries for modular and efficient query handling.
+
+This project not only sharpened my technical command over SQL but also enhanced my logical thinking, data organization, and problem-solving capabilities. These skills directly align with the expectations of Cognizant’s DNP 4.0 program, where scalable data handling and efficient querying are critical.
